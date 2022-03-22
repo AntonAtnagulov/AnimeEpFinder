@@ -11,6 +11,8 @@ const hbs = require('hbs');
 const { sessionLogger, userName } = require('./middleware/sessionLogger');
 const mainRouter = require('./routes/main');
 const registerRouter = require('./routes/register');
+const loginRouter = require('./routes/login');
+const logoutRouter = require('./routes/logout');
 
 // Импортируем созданный в отдельный файлах рутеры.
 const app = express();
@@ -44,6 +46,8 @@ const sessionConfig = {
 
   app.use('/', mainRouter);
   app.use('/register', registerRouter);
+  app.use('/login', loginRouter);
+  app.use('/logout', logoutRouter);
 
   app.listen(PORT, () => {
     console.log(`server started PORT: ${PORT}`);
