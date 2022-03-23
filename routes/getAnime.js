@@ -10,8 +10,8 @@ router.get('/', async (req, res) => {
 
 router.post('/', upload.single('screen'), async (req, res) => {
     const imgPath = req.file.path
-    console.log('==========>', imgPath);
-    console.log(req.file);
+    // console.log('==========>', imgPath);
+    // console.log(req.file);
     const response = await fetch("https://api.trace.moe/search", {
         method: "POST",
         body: fs.readFileSync(imgPath),
@@ -30,11 +30,14 @@ router.post('/', upload.single('screen'), async (req, res) => {
               english
               native
             }
+            coverImage {
+              large
+            }
           }
         }`;
 
     let variables = {
-        id: response.result[1].anilist
+        id: response.result[0].anilist
     };
 
     let url = 'https://graphql.anilist.co',
@@ -53,12 +56,26 @@ router.post('/', upload.single('screen'), async (req, res) => {
     const animeId = await fetch(url, options).then(e => e.json())
     const animeName = animeId.data.Media.title.romaji
     const animeStat = animeId.data.Media
-    // console.log(animeId.data.Media)
+    console.log(animeId.data.Media)
         
+    const timeConv = (time) => {
+        const hours = Math.floor(time / 60 / 60)
+        const minutes = Math.floor(time / 60) -(hours * 60)
+        const seconds = Math.floor(time % 60)
+        const formatted = [
+            hours.toString().padStart(2, '0'),
+            minutes.toString().padStart(2, '0'),
+            seconds.toString().padStart(2, '0')
+          ].join(':');
+        return formatted
+    }
+
     const result = response.result[1]
-    console.log(result)
+    const from = timeConv(response.result[1].from)
+    const to = timeConv(response.result[1].to)
+    // console.log(result)
     fs.unlinkSync(imgPath)
-    res.render('entries/episodeResult', { result, animeName, animeStat })
+    res.render('entries/episodeResult', { result, animeName, animeStat, from, to })
 })
 
 module.exports = router;

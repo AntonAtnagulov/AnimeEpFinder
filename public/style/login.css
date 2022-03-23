@@ -1,0 +1,25 @@
+html {
+    background: linear-gradient(#1d7281, #0a0d33);
+    height: 100%;
+}
+
+body {
+    background-color: #ffffff00;
+}
+
+.mainBox {
+    margin-top: 170px;
+    display: flex;
+    justify-content: center;
+}
+
+.contentBox {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.btn-primary {
+    background: linear-gradient(180deg, #1d7281, #353861);
+    border: 0px solid #ffffff00;
+}

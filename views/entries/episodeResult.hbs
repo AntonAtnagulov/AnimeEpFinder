@@ -1,16 +1,20 @@
 <link rel="stylesheet" href="/style/episodeResult.css">
+<div class="box">
 <div id="mainBox">
     <div class="contentBox">
+        <div class="stats">
         <h3>{{animeName}}</h3>
-        <p>Эпизод: {{result.episode}}</p>
-        <p>Формат: {{animeStat.format}}</p>
-        <p>Всего эпизодов: {{animeStat.episodes}}</p>
-        <p>Оценка: {{animeStat.averageScore}}</p>
-        {{!-- <div>
-            <img src="{{result.image}}" /></p>
-        </div> --}}
+        <br/>
+        <div>Эпизод: {{result.episode}}</div>
+        <div>Отрывок: {{from}} - {{to}}</div>
+        <div>Формат: {{animeStat.format}}</div>
+        <div>Всего эпизодов: {{animeStat.episodes}}</div>
+        <div class="scoreBox">Оценка: <div class="score">{{animeStat.averageScore}}</div></div>
+        </div>
+        <div><img class="poster" src="{{animeStat.coverImage.large}}"></div>
+    </div>
         <div class="video">
             <video src="{{result.video}}" controls="controls" />
         </div>
-    </div>
+</div>
 </div>
