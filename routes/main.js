@@ -9,4 +9,8 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/getCat', async (req, res) => {   
+    res.render('entries/getCat', )
+})
+
 module.exports = router;

@@ -13,6 +13,7 @@ const mainRouter = require('./routes/main');
 const registerRouter = require('./routes/register');
 const loginRouter = require('./routes/login');
 const logoutRouter = require('./routes/logout');
+const animeRouter = require('./routes/getAnime');
 
 // Импортируем созданный в отдельный файлах рутеры.
 const app = express();
@@ -41,13 +42,14 @@ const sessionConfig = {
     },
   };
   app.use(session(sessionConfig));
-  app.use(sessionLogger);
+  // app.use(sessionLogger);
   app.use(userName);
 
   app.use('/', mainRouter);
   app.use('/register', registerRouter);
   app.use('/login', loginRouter);
   app.use('/logout', logoutRouter);
+  app.use('/getAnime', animeRouter);
 
   app.listen(PORT, () => {
     console.log(`server started PORT: ${PORT}`);
