@@ -1,7 +1,12 @@
 const router = require('express').Router();
 const fetch = require('node-fetch');
 
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
+    res.redirect('/main/1')
+})
+
+router.get('/main/:id', async (req, res) => {
+    console.log('==========>',req.params.id)
     const query = `
         query ($page: Int, $perPage: Int, $search: String) {
             Page(page: $page, perPage: $perPage) {
@@ -29,7 +34,7 @@ router.get('/', async (req, res) => {
         }`;
 
         let variables = {
-            page: 2,
+            page: req.params.id,
             perPage: 7,
          };
 
@@ -53,7 +58,7 @@ router.get('/', async (req, res) => {
         const user = req.session.user
         res.render('entries/mainPage', { user, animeStat})
     } else {
-        res.render('entries/mainPage', { animeStat})
+        res.render('entries/mainPage', { animeStat })
     }
 })
 

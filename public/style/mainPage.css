@@ -11,6 +11,11 @@ body {
     color: #ffffff;
 }
 
+.headDiv h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
 .contentBox {
     display: flex;
 }
@@ -83,5 +88,31 @@ body {
 .rating {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.prew, .next, .go{
+    margin: 10px;
+    user-select: none;
+    padding: 5px 12px;
+    color: #ffffff;
+    background-color: #1d7281;
+    border-radius: 5px;
+}
+
+.input {
+    width: 60px;
+    border-radius: 6px;
+}
+
+.select {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
