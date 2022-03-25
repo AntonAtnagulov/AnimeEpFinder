@@ -1,5 +1,6 @@
 #navBar {
     display: flex;
+    padding: 0px 100px;
 }
 
 #navbarNav {

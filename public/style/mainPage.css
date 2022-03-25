@@ -1,0 +1,87 @@
+html {
+    background: linear-gradient(#1d7281, #0a0d33);
+    height: 100%;
+}
+
+body {
+    background-color: #ffffff00;
+}
+
+.headDiv {
+    color: #ffffff;
+}
+
+.contentBox {
+    display: flex;
+}
+
+.box {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 15px;
+    border-radius: 12px;
+}
+
+.box img {
+    height: 330px;
+    width: 240px;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.box p {
+    text-align: center;
+}
+
+.genreBox {
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.genre {
+    margin: 2px;
+    color: #ffffff;
+    padding: 4px;
+    display: inline-block;
+    font-size: 12px;
+    background-color: #1d7281;
+    border-radius: 6px;
+}
+
+.scoreBox {
+    display: flex;
+    justify-content: space-between;
+    width: 130px
+}
+
+.score {
+    font-weight: 600;
+    display: flex;
+    color: #ffffff;
+    height: 30px;
+    width: 50px;
+    background: linear-gradient(#1d7281, #0a0d33);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.format {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column
+}
+
+.textContent {
+    margin: 10px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

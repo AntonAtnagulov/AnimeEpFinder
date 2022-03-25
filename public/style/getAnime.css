@@ -1,0 +1,75 @@
+html {
+    background: linear-gradient(#1d7281, #0a0d33);
+    height: 100%;
+}
+
+body {
+    background-color: #ffffff00;
+}
+
+.mainBox {
+    margin-top: 170px;
+    display: flex;
+    justify-content: center;
+}
+
+.contentBox {
+    background-color: #ffffff;
+    padding: 80px 50px;
+    border-radius: 20px;
+}
+
+.contentBox1 {
+    display: flex;
+    flex-direction: column;
+}
+
+h5 {
+    margin-bottom: 60px;
+}
+
+.btn-primary {
+    margin-top: 25px;
+    background: linear-gradient(180deg, #1d7281, #353861);
+    border: 0px solid #ffffff00;
+}
+
+.field__wrapper {
+    width: 100%;
+    position: relative;
+    margin: 15px 0;
+    text-align: center;
+  }
+   
+  .field__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+   
+  .field__file-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+   
+
+  .field__file-button {
+    width: 130px;
+    height: 60px;
+    background: linear-gradient(180deg, #1d7281, #353861);
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+  }

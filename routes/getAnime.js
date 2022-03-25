@@ -10,8 +10,6 @@ router.get('/', async (req, res) => {
 
 router.post('/', upload.single('screen'), async (req, res) => {
     const imgPath = req.file.path
-    // console.log('==========>', imgPath);
-    // console.log(req.file);
     const response = await fetch("https://api.trace.moe/search", {
         method: "POST",
         body: fs.readFileSync(imgPath),
@@ -73,7 +71,6 @@ router.post('/', upload.single('screen'), async (req, res) => {
     const result = response.result[1]
     const from = timeConv(response.result[1].from)
     const to = timeConv(response.result[1].to)
-    // console.log(result)
     fs.unlinkSync(imgPath)
     res.render('entries/episodeResult', { result, animeName, animeStat, from, to })
 })

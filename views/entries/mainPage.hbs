@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/style/mainPage.css">
+<div class="headDiv">
+    <h2>Топ 7 аниме по версии Anilist</h2>
+</div>
+<div>
+    <div class="contentBox">
+        {{#each animeStat}}
+        <div class="box">
+            <img src="{{this.coverImage.large}}" />
+            <div class="textContent">
+            <p>{{this.title.english}}</p>
+            <div class="format">
+            <div class="rating">Формат: <div>{{this.format}}</div></div>
+            <div class="rating">Статус: <div>{{this.status}}</div></div>
+            </div>
+            <div class="rating">Эпизоды: <div>{{this.episodes}}</div></div>
+            <div class="rating">Рейтинг: <div class="score">{{this.averageScore}}</div></div>
+            </div>
+            <div class="genreBox">
+                {{#each this.genres}}
+                <div class="genre">{{this}}</div>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

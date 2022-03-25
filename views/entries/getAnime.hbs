@@ -1,7 +1,16 @@
-{{!-- <script defer src="/js/findEpisode.js"></script> --}}
-<form id="animeForm" acton="/getAnime" method="post" enctype="multipart/form-data">
-<h5>Upload a screenshot to search for an episode</h5>
-<input type="file" name="screen"/>
-<br/>
-<button type="submit">GET</button>
-</form>
+<link rel="stylesheet" href="/style/getAnime.css">
+<div class="mainBox">
+    <div class="contentBox">
+        <form class="contentBox1" id="animeForm" acton="/getAnime" method="post" enctype="multipart/form-data">
+            <h5>Загрузите скриншот, для поиска аниме</h5>
+            <div class="field__wrapper">
+                <input name="screen" type="file" id="field__file-2" class="field field__file">
+                <label class="field__file-wrapper" for="field__file-2">
+                    <div class="field__file-button">Выбрать</div>
+                </label>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Определить</button>
+        </form>
+    </div>
+</div>
