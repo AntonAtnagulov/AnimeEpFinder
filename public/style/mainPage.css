@@ -1,10 +1,11 @@
 html {
-    background: linear-gradient(#1d7281, #0a0d33);
     height: 100%;
 }
 
 body {
-    background-color: #ffffff00;
+    margin: 0;
+    background: linear-gradient(90deg, #1d7281, #0a0d33);
+    background-size: contain;
 }
 
 .headDiv {
@@ -18,6 +19,9 @@ body {
 
 .contentBox {
     display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .box {

@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../db/models')
 
-
 router.get('/', async (req, res) => {
     res.render('entries/register')
 })

@@ -1,10 +1,7 @@
-html {
-    background: linear-gradient(#1d7281, #0a0d33);
-    height: 100%;
-}
-
 body {
-    background-color: #ffffff00;
+    margin: 0;
+    background: linear-gradient(90deg, #1d7281, #0a0d33);
+    background-size: contain;
 }
 
 .mainBox {
@@ -14,10 +11,17 @@ body {
 }
 
 .contentBox {
+    width: 30%;
     background-color: #ffffff;
-    padding: 80px 50px;
+    padding: 4% 4%;
     border-radius: 20px;
 }
+
+@media (max-width: 900px) {
+    .contentBox {
+        width: 90%;
+    }
+    }
 
 .contentBox1 {
     display: flex;
@@ -26,6 +30,7 @@ body {
 
 h5 {
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .btn-primary {
@@ -33,13 +38,6 @@ h5 {
     background: linear-gradient(180deg, #1d7281, #353861);
     border: 0px solid #ffffff00;
 }
-
-.field__wrapper {
-    width: 100%;
-    position: relative;
-    margin: 15px 0;
-    text-align: center;
-  }
    
   .field__file {
     opacity: 0;
@@ -55,8 +53,7 @@ h5 {
    
 
   .field__file-button {
-    width: 130px;
-    height: 60px;
+    padding: 2% 4%;
     background: linear-gradient(180deg, #1d7281, #353861);
     color: #fff;
     font-size: 1.125rem;

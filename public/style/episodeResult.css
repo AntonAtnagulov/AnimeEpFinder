@@ -1,10 +1,7 @@
-html {
-    background: linear-gradient(#1d7281, #0a0d33);
-    height: 100%;
-}
-
 body {
-    background-color: #ffffff00;
+    margin: 0;
+    background: linear-gradient(90deg, #1d7281, #0a0d33);
+    background-size: contain;
 }
 
 .box {
@@ -15,9 +12,9 @@ body {
 }
 
 #mainBox {
-    width: 650px;
-    height: 400px;
-    top: 100px;
+    width: 35%;
+    height: 60%;
+    top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +24,7 @@ body {
 }
 
 .contentBox {
-    width: 600px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -52,7 +49,7 @@ body {
 .scoreBox {
     display: flex;
     justify-content: space-between;
-    width: 130px
+    width: 30%
 }
 
 .score {
@@ -60,7 +57,7 @@ body {
     display: flex;
     color: #ffffff;
     height: 30px;
-    width: 50px;
+    width: 100%;
     background: linear-gradient(#1d7281, #0a0d33);
     border-radius: 5px;
     justify-content: center;
@@ -76,3 +73,29 @@ video {
     border-radius: 15px;
     margin: 30px 0px;
 }
+
+@media (max-width: 900px) {
+    .box {
+        margin-top: 30px;
+    }
+
+    #mainBox {
+        width: 90%;
+    }
+
+    .contentBox {
+        width: 90%;
+    }
+
+    .scoreBox {
+        width: 70%
+    }
+
+    video {
+        width: 100%;
+    }
+
+    .poster {
+        width: 100%;
+    }
+    }
