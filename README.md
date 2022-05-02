@@ -12,14 +12,13 @@ Web-приложение, которое позволяет, найти аним
 <img src="./gif/EpFind-desktop.gif" alt="desktope" width='800px' />
 </div>
 ​
+
 #### MOBILE:
 <div align="center">
 <img src="./gif/EpFind-mobile.gif" alt="desktope" width='300px' />
 </div>
 ​
-​
-## Начало
-​
+
 ### Установка
 
 - `npm install` для установки npm-зависимостей проекта
