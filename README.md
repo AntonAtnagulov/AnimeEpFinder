@@ -9,12 +9,12 @@ Web-приложение, которое позволяет, найти аним
 ​
 #### DESKTOP:
 <div align="center">
-<img src="./gif/EpFind - desktop.gif" alt="desktope" width='800px' />
+<img src="./gif/EpFind-desktop.gif" alt="desktope" width='800px' />
 </div>
 ​
 #### MOBILE:
 <div align="center">
-<img src="./gif/EpFind - mobile.gif" alt="desktope" width='300px' />
+<img src="./gif/EpFind-mobile.gif" alt="desktope" width='300px' />
 </div>
 ​
 ​
